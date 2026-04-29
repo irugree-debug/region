@@ -36,4 +36,17 @@ cef.on("speed_update", (type, value) => {
         fuel = 340 + value * 3.35;
         document.getElementById("etoFuel").style = `stroke-dasharray: 340;stroke-dashoffset: ${fuel};`;
     }
+    cef.on("update_speed_val", (speed, fuel) => {
+    // Обновляем числовое значение скорости
+    const speedElement = document.getElementById("speedValue");
+    if (speedElement) speedElement.innerText = speed;
+
+    // Обновляем шкалу скорости (id="etoSpeed" из index.html)
+    // 1208 - начальное смещение (0 км/ч), рассчитываем прогресс
+    let speedOffset = -1208 + (speed * 2.5); 
+    document.getElementById("etoSpeed").style.strokeDashoffset = speedOffset;
+
+    // Обновляем топливо (используя вашу логику из JS)
+    let fuelOffset = 340 + fuel * 3.35;
+    document.getElementById("etoFuel").style.strokeDashoffset = fuelOffset;
 });
