@@ -27,7 +27,12 @@ body {
     display: flex;
     align-items: center;
 }
-
+.logo {
+    position: absolute; /* Логотип перестает расталкивать соседей */
+    width: 210px;       /* Укажите нужный вам размер */
+    right: 0;           /* Прижать к правому краю блока */
+    top: -5px;         /* Можно поднять или опустить, если нужно */
+}
 .serverName {
     margin-right: 15px;
     font-size: 18px;
