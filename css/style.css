@@ -64,7 +64,12 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
+.logo {
+    position: absolute; /* Логотип перестает расталкивать соседей */
+    width: 210px;       /* Укажите нужный вам размер */
+    right: 0;           /* Прижать к правому краю блока */
+    top: -5px;         /* Можно поднять или опустить, если нужно */
+}
 .hud-server-name {
     font-family: 'Font 900';
     font-size: 1.3vw;
