@@ -1,0 +1,137 @@
+body {
+	overflow-x: none;
+}
+
+#dialog_container {
+	font-family: 'Proxima Nova Rg';
+	color: #fff;
+	letter-spacing: -0.2px;
+	font-size: 13px;
+	background: rgba(0, 0, 0, 0.65);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 20px;
+    max-width: 600px;
+    width: auto;
+}
+
+.dialogHeader {
+	font-size: 16px;
+	color: #3986d3;
+	font-family: 'Proxima Nova Sm';
+	margin-bottom: 5px;
+}
+
+.buttons {
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	user-select: none;
+}
+
+.clickBtn {
+	background: #282828d6;
+	padding: 5px 10px;
+	margin-right: 10px;
+	opacity: 0.7;
+	font-size: 12px;
+	transition: opacity 0.5s;
+	width: 100px;
+	text-align: center;
+}
+
+.clickBtn:hover { opacity: 1; }
+
+.dialog_input {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	outline: 0;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 7px 10px;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.dialogItem {
+	background-color: rgba(255, 255, 255, 0.1);
+	margin-bottom: 5px;
+	padding: 8px 15px;
+	text-align: center;
+	min-width: 250px;
+
+	transition: 0.4s;
+}
+
+.dialogItem:hover {
+	background-color: rgba(255, 255, 255, 0.95);
+	color: #252525;
+}
+
+.tablist_headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    align-self: end;
+}
+
+.dialogItemHeader {
+    margin-left: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.styleDialogTablist {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10.5pt;
+    color: #fff;
+    border-radius: 9px;
+
+    transition: 0.5s;
+    margin-bottom: 5px;
+}
+
+.dialogText {
+	max-height: 500px;
+	width: 100%;
+    overflow-y: auto;  
+}
+
+span {
+	color: var(--i);
+	transition: 0.4s;
+}
+
+.dialogItem:hover span {
+  color: var(--g);
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+    width: 3px;       
+    right: 0;      
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(35, 36, 40, 0.15);     
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);  
+}
+
+.active_text {
+	color: #252525;
+	color: var(--b);
+}
+
+.white_back {
+	background-color: #fff;
+	color: #252525;
+}

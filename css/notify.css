@@ -1,0 +1,104 @@
+/* body {
+    background: url(img/notify/back.jpg);
+    background-size: cover;
+} */
+
+#notify-center {
+    font-family: 'Font 900';
+    color: #00b7ce;
+    font-size: 0.9vw;
+    user-select: none;
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    /* filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .5)); */
+}
+
+#notify-center-img {
+    width: 3.9vw;
+    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .5));
+}
+
+#notify-center-text {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.592);
+}
+
+#notify-bock-frame {
+    position: absolute;
+    bottom: 26.5%;
+    left: 6.5%;
+    color: #fff;
+    min-width: 14vw;
+    max-width: 16vw;
+}
+
+.notify-bock {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-top: 0.7vw;
+    color: #fff;
+    font-family: 'Font 700';
+    font-size: 0.7vw;
+    /* padding: 10px; */
+    border-radius: 6px;
+    background: linear-gradient(to right, #7aa778, #7aa7781a);
+}
+
+#notify-text {
+    margin-left: 0.5vw;
+} 
+
+#background-png-notify {
+    background-color: rgba(0, 0, 0, 0.418);
+    /* width: 100px; */
+    padding: 7px;
+    border-radius: 6px;
+}
+
+#key-help {
+    font-family: 'Proxima Nova Bold';
+    font-size: 1.2vw;
+    user-select: none;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    filter: drop-shadow(0 1px 15px rgba(0, 0, 0, 0.847));
+    align-content: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#key-help-name {
+    background-color: rgba(0, 0, 0, 0.833);
+    padding: 3px 10px;
+    margin-right: 0.5vw;
+    font-size: 1.3vw;
+}
+
+#key-help-text {
+    letter-spacing: 1px;
+}

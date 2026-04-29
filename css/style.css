@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@font-face {
+    font-family: 'Electronica';
+    src: url(../fonts/Electronica.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Font 700';
+    src: url('../fonts/MuseoSansCyrl-700.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansCyrl-700Italic';
+    src: url('../fonts/MuseoSansCyrl-700Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Font 900';
+    src: url('../fonts/MuseoSansCyrl-900.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiboldItalic';
+    src: url('../fonts/Gilroy-SemiboldItalic.ttf') format('truetype');
+    font-style: italic;    
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../fonts/ProximaNova-Bold_1.ttf') format('truetype');
+    font-style: italic;    
+}
+
+body {
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hud-container {
+    /* position: absolute; */
+    /* right: 1%; */
+    margin-left: auto;
+    margin-right: 1vw;
+    width: 16vw;
+    /* margin: 20px; */
+}
+
+.hud-one-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hud-server-name {
+    font-family: 'Font 900';
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    color: #ff0026;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.35);
+}
+
+.hud-server-number {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Font 700';
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    letter-spacing: 0.3px;
+}
+
+.hud-line {
+    background-color: rgba(255, 255, 255, 0.411);
+    width: 100%;
+    height: 2px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+.hud-two-line {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+progress {
+    background: rgba(0, 0, 0, 0.001);
+    height: 8px;
+    width: 10vw;
+	border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+	background: rgba(0, 0, 0, 0.425);
+	border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #f04245;
+	border-radius: 10px;
+}
+
+.progress-bar {
+	border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#arm_progress::-webkit-progress-value {
+	background-color: #fff;
+}
+
+#run_progress::-webkit-progress-value {
+    background-color: #2bca68;
+}
+
+#hp_value, #arm_value, #run_value {
+    padding-left: 5px;
+    font-family: 'MuseoSansCyrl-700Italic';
+    font-size: 0.8vw;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+#ammo_value {
+    font-family: 'MuseoSansCyrl-700Italic';
+    font-size: 0.8vw;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: -0.3%;
+    color: #fff;    
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+#ammo_value_source {
+    position: absolute;
+    margin-left: 1.5%;
+    margin-top: -0.3%;
+    background-image: url(../images/0.png); 
+    background-size: 20px; 
+    width: 20px; 
+    height: 20px; 
+    background-repeat: none;
+}
+
+.hud-money {
+    font-family: 'Gilroy-SemiboldItalic';
+    color: #64b95b;
+    font-size: 1.8vw;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    letter-spacing: 2.5px;
+    text-align: right;
+}
+
+.hud-suspect-block {
+    margin-top: 15px;
+    font-family: 'Gilroy-SemiboldItalic';
+    color: #fff;
+    font-size: 1.6vh;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.425);
+    background: linear-gradient(to right, #161163, #4b203c);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+#wanted_5, #wanted_4, #wanted_3, #wanted_2, #wanted_1, #wanted_0 {
+    width: 1.2vw;
+}
+
+#notify-right-bock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.7vw;
+    color: #fff;
+    font-family: 'Font 700';
+    font-size: 0.7vw;
+    padding: 10px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #7b78a7, #645fa421);
+}
+
+.hud-server-datetime {
+    position: absolute;
+    bottom: 23.5%;
+    left: 6.5%;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    display: flex;
+    color: #fff;
+    width: 11.5vw;
+    justify-content: space-between;
+}
+
+.hud-server-time {
+    display: flex;
+    align-items: center;
+}
+
+#server-time, #server-date {
+    margin-left: 0.3vw;
+    font-family: 'Gilroy-SemiboldItalic';
+}
+
+#server-info {
+    position: absolute;
+    left: 1vw;
+    bottom: 0.5vw;
+    font-family: 'Font 700';
+    font-size: 0.75vw;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.65);
+}
+
+.kill-list {
+    position: absolute;
+    right: 2%;
+    margin-top: 1%;
+	z-index: 1000;
+	color:  #252525;
+}
+
+.kill-list-item {
+    min-width: 300px;
+    max-width: 500px;    
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Font 700';
+    color: #fff;
+
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    justify-content: space-between;
+}
+
+.kill-list-img {
+    width: 40px; margin-left: 30px; margin-right: 30px;
+}
+
+#capture-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px 25px;
+    /* border-radius: 10px; */
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);    
+    font-family: 'Font 700';
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 28vw;
+}
+
+.capture-one-command {
+    display: flex;
+    align-items: center;
+}
+
+.capture-center {
+    text-align: center;
+    font-size: 1vw;
+}
+
+#capture-time {
+    font-family: 'Font 900';
+}
+
+#capture-time-text {
+    font-size: 0.85vw;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.5px;
+}
+
+.capture-name {
+    text-transform: uppercase;
+    font-family: 'Font 700';
+    font-size: 0.85vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.capture-score {
+    font-family: 'Font 900';
+    font-size: 1.5vw;
+    color: #f2143d;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.235);    
+}
+
+@media (max-height: 768px){
+    .hud-server-datetime {
+        width: 11.5vw;
+        font-size: 0.8vw;
+    } 
+    .hud-server-time img {
+        width: 1.5vw;
+    }
+    .hud-server-number {
+        text-align: right;
+        text-transform: uppercase;
+        font-family: 'Font 700';
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        letter-spacing: 0.3px;
+        font-size: 1vw;
+    }
+    progress {
+        background: rgba(0, 0, 0, 0.001);
+        height: 8px;
+        width: 8vw;
+        border-radius: 10px;
+    }    
+    #ammo_value {
+        font-family: 'MuseoSansCyrl-700Italic';
+        font-size: 0.8vw;
+        position: absolute;
+        margin-left: 1.5%;
+        margin-top: -0.3%;
+        color: #fff;    
+        text-align: center;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+    
+    #ammo_value_source {
+        position: absolute;
+        margin-left: 1.9%;
+        margin-top: -0.3%;
+        background-image: url(../images/0.png); 
+        background-size: 20px; 
+        width: 20px; 
+        height: 20px; 
+        background-repeat: none;
+    }    
+    .hud-server-logo {
+        width: 60px;
+    }
+    .kill-list {
+        position: absolute;
+        right: 3%;
+        margin-top: 1%;
+
+        font-size: 1vw;
+    }    
+    .kill-list-item {
+        min-width: 200px;
+        max-width: 400px;    
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        font-family: 'Font 700';
+        color: #fff;
+    
+        text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        justify-content: space-between;
+    }    
+    .kill-list-img {
+        width: 30px; margin-left: 20px; margin-right: 20px;
+    }    
+}
+
+@media (max-width: 1280px){
+    .hud-server-datetime {
+        width: 13vw;
+        font-size: 0.8vw;
+    } 
+    .hud-server-time img {
+        width: 1.5vw;
+    }
+    .hud-server-number {
+        text-align: right;
+        text-transform: uppercase;
+        font-family: 'Font 700';
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        letter-spacing: 0.3px;
+        font-size: 1vw;
+    }
+    progress {
+        background: rgba(0, 0, 0, 0.001);
+        height: 8px;
+        width: 8vw;
+        border-radius: 10px;
+    }    
+    #ammo_value {
+        font-family: 'MuseoSansCyrl-700Italic';
+        font-size: 0.8vw;
+        position: absolute;
+        margin-left: 1.5%;
+        margin-top: -0.3%;
+        color: #fff;    
+        text-align: center;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+    
+    #ammo_value_source {
+        position: absolute;
+        margin-left: 1.9%;
+        margin-top: -0.3%;
+        background-image: url(../images/0.png); 
+        background-size: 20px; 
+        width: 20px; 
+        height: 20px; 
+        background-repeat: none;
+    }    
+    .hud-server-logo {
+        width: 60px;
+    }
+    .kill-list {
+        position: absolute;
+        right: 3%;
+        margin-top: 1%;
+
+        font-size: 1vw;
+    }    
+    .kill-list-item {
+        min-width: 200px;
+        max-width: 400px;    
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        font-family: 'Font 700';
+        color: #fff;
+    
+        text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        justify-content: space-between;
+    }    
+    .kill-list-img {
+        width: 30px; margin-left: 20px; margin-right: 20px;
+    }
+}
+
+#capture-kill {
+
+
+    background-color: rgba(219, 67, 67, 0.795);
+    padding: 10px 25px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);    
+    font-family: 'Font 700';
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    bottom: 12%;
+    color: #FFF;
+    font-size: 0.7vw;
+    letter-spacing: 0.5px;
+    left: 50%;
+    text-align: center;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 28vw;
+}
+
+#fps {
+    position: absolute;
+    font-family: 'Proxima Nova Bold';
+    left: 0.2vw;
+    top: 0;
+    font-size: 0.95vw;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}

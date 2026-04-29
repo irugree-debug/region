@@ -1,0 +1,145 @@
+.iskra {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.iskra .box {
+    width: 500px;
+    height: 130px;
+    background-color: #038bb9;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.iskra .box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 475px;
+    height: 105px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.iskra .box .name {
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: #038bb9;
+    z-index: 250;
+    padding: 2.5px 3px 0px 2px;
+}
+
+.iskra .box .list {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+}
+
+.iskra .box .list .circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    /* margin-left: -10px; */
+    background-color: #3939398a;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 5px;
+}
+
+.iskra .box .list .circle-active {
+    background: rgb(0, 184, 0);
+}
+
+.iskra .box .list .circle p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.box .box-speed {
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+    height: 75px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    background: #707070;
+}
+
+.box .box-speed .speed {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Electronica';
+    font-size: 42px;
+    color: rgb(0, 187, 0);
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.box .box-speed .text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 102.5%;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.box .information {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    width: 200px;
+    height: 75px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    background: #707070;
+    text-align: center;
+}
+
+.box .information .name-car {
+    position: relative;
+    top: 5px;
+    color: rgb(0, 187, 0);
+    font-size: 15px;
+    font-family: 'Electronica';
+}
+
+.box .information .number-car {
+    position: relative;
+    top: 20px;
+    color: rgb(0, 187, 0);
+    font-size: 25px;
+    font-family: 'Electronica';
+}
+
+.box .information .text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 102.5%;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
